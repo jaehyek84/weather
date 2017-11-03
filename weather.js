@@ -36,17 +36,13 @@ let handleWeatherResponse = function(response) {
 $(".forecast").empty();
 let markup = "";
 for(let i=0; i<6; i++) {
-
   let markup = "<div class='col'>";
   markup += icon(response.daily.data[i])
   markup += "<h4>" + Math.round(response.daily.data[i].temperatureHigh) + "|" + Math.round(response.daily.data[i].temperatureLow) + "</h4>";
   markup += "<h5>" + response.daily.data[i].summary + "</h5></div>"
-
 $(".forecast").append(markup);
 }
-$(".forecast").fadeIn(1000);
-
-
+$(".forecast").fadeIn(800);
   // *** your code ends here - no, really.
 };
 
